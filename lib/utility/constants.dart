@@ -5,4 +5,9 @@ const Color secondaryColor = Color(0xffF6EFEF);
 const Color borderPrimary = Color.fromARGB(120, 112, 66, 50);
 const Color borderSecondary = Color(0xffD1C7C7);
 const Color greyColor = Color(0xffF9F8FB);
-const Color whiteColor = Color(0xffffffff);
+const Color whiteColor = Color(0xFFFFFFFF);
+const Color headingColor = Color(0xFF222222);
+const Color textColor = Color(0xDB543232);
+
+const Color hintColor = Color(0xFF999999);
+const Color description = Color(0xFF7c7c7c);

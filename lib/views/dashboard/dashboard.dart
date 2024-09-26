@@ -25,16 +25,9 @@ class Dashboard extends StatelessWidget {
                   onPageChanged: (index) {
                   
                       cont.selectedIndex = index;
-                
+              
                   },
-                  children: <Widget>[
-                    Center(child: Text('Home Page')),
-                    Center(child: Text('Menu Page')),
-                    Center(child: Text('History Page')),
-                    Center(child: Text('wallet Page')),
-                    Center(child: Text('Settings Page')),
-                    Center(child: Text('Logout Page')),
-                  ],
+                  children: cont.screenList
                 ),
               ),
               CheckoutSection()

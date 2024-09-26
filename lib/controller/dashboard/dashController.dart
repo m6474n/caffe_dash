@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pos/views/Home/home.dart';
 
 class DashController extends GetxController{
  final PageController pageController = PageController();
   int selectedIndex = 0;
+
+
+List<Widget> screenList= <Widget>[
+                    Home(),
+                    Center(child: Text('Menu Page')),
+                    Center(child: Text('History Page')),
+                    Center(child: Text('wallet Page')),
+                    Center(child: Text('Settings Page')),
+                    Center(child: Text('Logout Page')),
+                  ];
 
 List<Map<String,dynamic>> sidebarItems = [
   {
