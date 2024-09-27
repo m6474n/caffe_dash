@@ -18,7 +18,7 @@ class HomeController extends GetxController {
       'isActive': false,
     },
     {
-      'title': "Milk Shakes",
+      'title': "Shakes",
       'image': "assets/milk.png",
       'isActive': false,
     },

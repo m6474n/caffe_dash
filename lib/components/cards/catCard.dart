@@ -17,17 +17,17 @@ class CatCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      padding:  EdgeInsets.symmetric(horizontal: width*0.004),
       child: GestureDetector(
         onTap: onTap,
         child: Container(
-          height: 109,
+         
           width: double.infinity,
           decoration: BoxDecoration(
               color: isActive ? secondaryColor : whiteColor,
               border: Border.all(
                 width: 1,
-                color: isActive ? borderPrimary : borderSecondary,
+                color: isActive ? borderPrimary : secondaryColor,
               ),
               borderRadius: BorderRadius.circular(16)),
           child: Center(
@@ -36,8 +36,9 @@ class CatCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 50,
-                  width: 50,
+                  constraints: BoxConstraints(maxHeight: 50,maxWidth: 50),
+                  height: width*0.05,
+                  width: width*0.05,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
@@ -48,7 +49,7 @@ class CatCard extends StatelessWidget {
                 SizedBox(
                   height: 4,
                 ),
-                Text(title)
+                Text(title,style: TextStyle(),textAlign: TextAlign.center,)
               ],
             ),
           ),

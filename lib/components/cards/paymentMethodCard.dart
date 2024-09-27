@@ -29,7 +29,7 @@ final VoidCallback onTap;
                               height: 34,
                               color: isActive? primaryColor:description,
                             ),
-                            SizedBox(height: 4,), Text(title, style: TextStyle(color: description),)
+                            SizedBox(height: 4,), Text(title, style: TextStyle(color: isActive? primaryColor: description),textAlign: TextAlign.center,)
                           ],
                         ),
                       ),

@@ -26,7 +26,7 @@ class CalculationContainer extends StatelessWidget {
           Text('\$1.061',style: TextStyle(fontSize: 16, color: description),)
         ],),
       ),Divider(
-color: primaryColor,
+color: secondaryColor,
       ),
       
       Padding(

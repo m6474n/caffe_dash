@@ -14,14 +14,15 @@ class NoteButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12)
       ),
       child: Center(child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: [
             Text("Note", style: TextStyle(color:primaryColor, fontSize: titleSize, ),),
-            Image(image: AssetImage('assets/edit.png',), height: 10,)
+            SizedBox(width: 4,),
+            Image(image: AssetImage('assets/edit.png',), height: 8,)
           ],
         ),
       )),
