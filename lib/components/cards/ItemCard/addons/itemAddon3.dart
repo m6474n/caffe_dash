@@ -61,9 +61,7 @@ class ItemAddon3 extends StatelessWidget {
                                     child: Text("L",
                                         style: TextStyle(fontSize: 16))),
                               ),
-                              SizedBox(
-                                width: 6,
-                              ),
+                             
                             ],
                           )
                         ],

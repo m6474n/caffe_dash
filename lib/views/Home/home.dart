@@ -23,9 +23,10 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: 30,),
                   Container(
                     // padding: EdgeInsets.symmetric(horizontal: 36),
-                    height: 100,
+                    
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -61,16 +62,30 @@ class Home extends StatelessWidget {
                           ));
                         }),
                       )),
-              
-                     Wrap(
-                      spacing:12 ,
-                      direction: Axis.horizontal,
-                      runSpacing: 12,
-                     children: List.generate(4, (index){
-                        return Container(
-                          width: width*0.205,
-                          child: ItemCard());
-                       }),
+                      SizedBox(height: 24,),
+                Text(
+                          "All Menu",
+                          style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: headingColor),
+                        ),                       SizedBox(height: 24,)
+              ,
+                     Container(
+                      height: height*0.701,
+                       child: SingleChildScrollView(
+                         child: Wrap(
+                          
+                          spacing:12 ,
+                          direction: Axis.horizontal,
+                          runSpacing: 12,
+                         children: List.generate(4, (index){
+                            return Container(
+                              width: width*0.205,
+                              child: ItemCard());
+                           }),
+                         ),
+                       ),
                      )
                 ],
               ),
