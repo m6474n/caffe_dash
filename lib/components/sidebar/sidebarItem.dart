@@ -15,7 +15,7 @@ class SidebarItem extends StatelessWidget {
     return AnimatedContainer(
       duration: Duration(milliseconds: 300),
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 18),
+        padding: EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
             color: isActive ? primaryColor : Colors.transparent,
             borderRadius: BorderRadius.circular(36)),

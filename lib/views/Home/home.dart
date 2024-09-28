@@ -4,6 +4,7 @@ import 'package:pos/components/cards/catCard.dart';
 import 'package:pos/components/cards/ItemCard/itemCard.dart';
 import 'package:pos/components/searchBox.dart';
 import 'package:pos/controller/home/homeController.dart';
+import 'package:pos/models/itemModel.dart';
 import 'package:pos/utility/constants.dart';
 
 class Home extends StatelessWidget {
@@ -38,7 +39,13 @@ class Home extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: headingColor),
                         ),
-                        Container(width: width * 0.26, child: SearchBox())
+                        Container(child: Row(children: [
+                           Container(width: width * 0.26, child: SearchBox()),SizedBox(width: 16,) ,GestureDetector(
+                            onTap:(){
+                              cont.showCheckoutBar();
+                            }, child: Icon(Icons.menu, size: 32,color: primaryColor,))
+                        ],),)
+                       
                       ],
                     ),
                   ),
@@ -64,7 +71,7 @@ class Home extends StatelessWidget {
                       )),
                       SizedBox(height: 24,),
                 Text(
-                          "All Menu",
+                          "${cont.selectedCategory} ",
                           style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
@@ -73,16 +80,19 @@ class Home extends StatelessWidget {
               ,
                      Container(
                       height: height*0.701,
+                      width: width,
                        child: SingleChildScrollView(
                          child: Wrap(
                           
                           spacing:12 ,
                           direction: Axis.horizontal,
                           runSpacing: 12,
-                         children: List.generate(4, (index){
+                         children: List.generate(cont.itemsList.length, (index){
+                          cont.item = Item.fromJson(cont.itemsList[index]);
                             return Container(
+                              
                               width: width*0.205,
-                              child: ItemCard());
+                              child: ItemCard(item: cont.item!,));
                            }),
                          ),
                        ),

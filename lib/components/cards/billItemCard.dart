@@ -24,7 +24,7 @@ class BillItemCard extends StatelessWidget {
               height: 65,
               width: 75,
               decoration: BoxDecoration(
-                
+                image: DecorationImage(image: AssetImage(image??""), fit: BoxFit.cover),
                   color: secondaryColor, borderRadius: BorderRadius.circular(12)),
             ),
           ),SizedBox(width: 18,) ,Expanded(

@@ -13,7 +13,7 @@ List<Widget> screenList= <Widget>[
                     Center(child: Text('History Page')),
                     Center(child: Text('wallet Page')),
                     Center(child: Text('Settings Page')),
-                    Center(child: Text('Logout Page')),
+                   
                   ];
 
 List<Map<String,dynamic>> sidebarItems = [
@@ -33,8 +33,8 @@ List<Map<String,dynamic>> sidebarItems = [
     'isActive': false
   },
   {
-    'title': 'Wallet',
-    'icon': "assets/Wallet.png",
+    'title': 'Inventory',
+    'icon': "assets/inventory.png",
     'isActive': false
   },
   {
@@ -42,11 +42,7 @@ List<Map<String,dynamic>> sidebarItems = [
     'icon': "assets/setting.png",
     'isActive': false
   },
-  {
-    'title': 'Logout',
-    'icon': "assets/Logout.png",
-    'isActive': false
-  },
+ 
 ];
 
 List<Widget> tabs = [];

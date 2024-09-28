@@ -15,40 +15,40 @@ class Sidebar extends StatelessWidget {
         init: DashController(),
         builder: (cont) {
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: EdgeInsets.symmetric(horizontal: 8),
               height: height,
               width: width * 0.08,
               color: whiteColor,
-              child: Column(
-                children: [
-                  Container(
-                    height: 100,
-                    child: Center(
-                      child: Image.asset("assets/K.png"),
-                    ),
+              child: Column(children: [
+                Container(
+                  height: 100,
+                  child: Center(
+                    child: Image.asset("assets/K.png"),
                   ),
-                  Expanded(
-                      child: ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-
-                          itemCount: cont.sidebarItems.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: GestureDetector(
-                                  onTap: () {
-                                    cont.onItemTapped(index);
-                                  },
-                                  child: SidebarItem(
-                                    title: cont.sidebarItems[index]['title'],
-                                    icon: cont.sidebarItems[index]['icon'],
-                                    isActive: cont.sidebarItems[index]
-                                        ['isActive'],
-                                  )),
-                            );
-                          }))
-                ],
-              ));
+                ),
+                Expanded(
+                    child: ListView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: cont.sidebarItems.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: GestureDetector(
+                                onTap: () {
+                                  cont.onItemTapped(index);
+                                },
+                                child: SidebarItem(
+                                  title: cont.sidebarItems[index]['title'],
+                                  icon: cont.sidebarItems[index]['icon'],
+                                  isActive: cont.sidebarItems[index]
+                                      ['isActive'],
+                                )),
+                          );
+                        })),
+                SidebarItem(
+                    title: "Logout", icon: 'assets/logout.png', isActive: false)
+                    ,SizedBox(height: 30,)
+              ]));
         });
   }
 }

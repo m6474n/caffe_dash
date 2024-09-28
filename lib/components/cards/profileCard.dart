@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:pos/utility/constants.dart';
 
 class ProfileCard extends StatelessWidget {
- final String userName, role;
-  const ProfileCard({super.key, required this.userName, required this.role});
+  final String userName, role, image;
+  final VoidCallback onTap
+;  const ProfileCard({
+    super.key,
+    required this.userName,
+    required this.image,
+    required this.onTap,
+    required this.role,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +24,19 @@ class ProfileCard extends StatelessWidget {
             height: 60,
             width: 60,
             decoration: BoxDecoration(
-                color: secondaryColor, borderRadius: BorderRadius.circular(12)),
+              image: DecorationImage(
+                image: AssetImage(image), // Use the image parameter here
+                fit: BoxFit.cover,
+              ),
+              color: secondaryColor,
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
           SizedBox(
             width: 16,
           ),
-          Center(
+          Expanded(
+            flex: 1,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,13 +48,17 @@ class ProfileCard extends StatelessWidget {
                 Text(
                   "$userName",
                   style: TextStyle(
-                      color: headingColor,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                )
+                    color: headingColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ],
             ),
-          )
+          ),
+          GestureDetector(
+            onTap: onTap,
+            child: Icon(Icons.close_sharp, color: primaryColor,))
         ],
       ),
     );
