@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pos/controller/home/homeController.dart';
+import 'package:pos/controller/menu/menuControler.dart';
 import 'package:pos/models/itemModel.dart';
 import 'package:pos/utility/constants.dart';
 

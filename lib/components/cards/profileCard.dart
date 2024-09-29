@@ -56,9 +56,9 @@ class ProfileCard extends StatelessWidget {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: onTap,
-            child: Icon(Icons.close_sharp, color: primaryColor,))
+          // GestureDetector(
+          //   onTap: onTap,
+          //   child: Icon(Icons.close_sharp, color: primaryColor,))
         ],
       ),
     );

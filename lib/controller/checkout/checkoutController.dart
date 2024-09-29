@@ -5,6 +5,7 @@ class CheckoutController extends GetxController{
 bool expandCheckout = true;
 toggleCheckoutBar(){
   expandCheckout = !expandCheckout;
+  update();
  if(expandCheckout == true){
    Future.delayed(Duration(milliseconds:500), (){
     showCheckoutContent = true;
@@ -14,7 +15,7 @@ toggleCheckoutBar(){
  else{
   showCheckoutContent = false;
  }
-  update();
+
 }
 bool showCheckoutContent = true;
 

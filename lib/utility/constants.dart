@@ -11,3 +11,13 @@ const Color textColor = Color(0xDB543232);
 
 const Color hintColor = Color(0xFF999999);
 const Color description = Color(0xFF7c7c7c);
+
+const Gradient  gradientColor = LinearGradient(colors: [
+   secondaryColor, 
+   primaryColor, 
+]);
+const Gradient  lightGradientColor = LinearGradient(colors: [
+    Color.fromARGB(164, 112, 66, 50),
+   Color.fromARGB(56, 246, 239, 239),
+ 
+], begin: Alignment.topCenter, end: Alignment.bottomCenter);

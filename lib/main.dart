@@ -3,7 +3,7 @@ import 'package:get/route_manager.dart';
 import 'package:pos/utility/constants.dart';
 import 'package:pos/views/Auth/login.dart';
 import 'package:pos/views/Dashboard/dashboard.dart';
-import 'package:pos/views/settingScreen.dart';
+import 'package:pos/views/Settings/settingScreen.dart';
 
 void main() {
   runApp(const MyApp());

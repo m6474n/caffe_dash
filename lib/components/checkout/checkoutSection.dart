@@ -32,7 +32,7 @@ class CheckoutSection extends StatelessWidget {
                 children: [
                   ProfileCard(
                     onTap: (){
-                      cont.toggleCheckoutBar();
+                      // cont.toggleCheckoutBar();
                     },
                     image: "assets/profile-pic.png",
                     userName: "Muhammad Mohsin",

@@ -11,10 +11,8 @@ class SettingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
     return Container(
       padding: EdgeInsets.all(18),
-     
       width: width*0.2055,
       decoration: BoxDecoration(
           color: whiteColor, borderRadius: BorderRadius.circular(12)),

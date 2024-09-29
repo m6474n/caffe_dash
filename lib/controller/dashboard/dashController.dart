@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pos/views/Home/home.dart';
-import 'package:pos/views/settingScreen.dart';
+import 'package:pos/views/Menu/menu.dart';
+import 'package:pos/views/Settings/settingScreen.dart';
 
 class DashController extends GetxController{
  final PageController pageController = PageController();
@@ -9,7 +10,7 @@ class DashController extends GetxController{
 
 
 List<Widget> screenList= <Widget>[
-  Center(child: Text('Menu Page')),
+  Home(),
                     Menu(),
                     
                     Center(child: Text('History Page')),
@@ -30,12 +31,12 @@ List<Map<String,dynamic>> sidebarItems = [
     'isActive': false
   },
   {
-    'title': 'History',
+    'title': 'Reports',
     'icon': "assets/history.png",
     'isActive': false
   },
   {
-    'title': 'Inventory',
+    'title': 'Add New',
     'icon': "assets/inventory.png",
     'isActive': false
   },
