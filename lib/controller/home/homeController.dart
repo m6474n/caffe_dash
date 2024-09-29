@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:pos/controller/checkout/checkoutController.dart';
 import 'package:pos/models/itemModel.dart';
 
-class HomeController extends GetxController {
+class MenuControler extends GetxController {
   Item? item;
   var checkoutCont = Get.find<CheckoutController>();
 

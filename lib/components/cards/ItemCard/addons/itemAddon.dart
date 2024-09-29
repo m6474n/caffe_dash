@@ -13,7 +13,7 @@ class ItemAddon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-        init: HomeController(),
+        init: MenuControler(),
         builder: (cont) {
           return Padding(
             padding: const EdgeInsets.only(top: 18.0),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:pos/utility/constants.dart';
 import 'package:pos/views/Auth/login.dart';
+import 'package:pos/views/Dashboard/dashboard.dart';
+import 'package:pos/views/settingScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
         useMaterial3: true,
       ),
-      home: Login()
+      home: Dashboard()
     );
   }
 }

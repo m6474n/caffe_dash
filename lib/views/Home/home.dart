@@ -7,15 +7,15 @@ import 'package:pos/controller/home/homeController.dart';
 import 'package:pos/models/itemModel.dart';
 import 'package:pos/utility/constants.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Menu extends StatelessWidget {
+  const Menu({super.key});
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return GetBuilder(
-        init: HomeController(),
+        init: MenuControler(),
         builder: (cont) {
           return Scaffold(
             body: Padding(

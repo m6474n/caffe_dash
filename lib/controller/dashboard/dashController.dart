@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pos/views/Home/home.dart';
+import 'package:pos/views/settingScreen.dart';
 
 class DashController extends GetxController{
  final PageController pageController = PageController();
@@ -8,11 +9,12 @@ class DashController extends GetxController{
 
 
 List<Widget> screenList= <Widget>[
-                    Home(),
-                    Center(child: Text('Menu Page')),
+  Center(child: Text('Menu Page')),
+                    Menu(),
+                    
                     Center(child: Text('History Page')),
                     Center(child: Text('wallet Page')),
-                    Center(child: Text('Settings Page')),
+                    SettingScreen(),
                    
                   ];
 
