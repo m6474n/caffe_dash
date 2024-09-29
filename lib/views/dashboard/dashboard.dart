@@ -21,6 +21,10 @@ class Dashboard extends StatelessWidget {
               Sidebar(),
               Expanded(
                 child: PageView(
+                  physics: NeverScrollableScrollPhysics(),
+             
+                  // scrollBehavior: ScrollBehavior.none,
+                  // scrollDirection: A,
                   controller: cont.pageController,
                   onPageChanged: (index) {
                   
