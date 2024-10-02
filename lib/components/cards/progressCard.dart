@@ -1,5 +1,8 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:pos/components/charts/customLineChart.dart';
+import 'package:pos/components/charts/lineChart.dart';
 import 'package:pos/utility/constants.dart';
 
 class ProgreeCard extends StatelessWidget {
@@ -72,7 +75,8 @@ class ProgreeCard extends StatelessWidget {
 }
 
 class TopStatBar extends StatelessWidget {
-  const TopStatBar({super.key});
+  var data;
+   TopStatBar({super.key, this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +107,11 @@ class TopStatBar extends StatelessWidget {
                   ],
                 )),
                 Expanded(
-                    child: Container(
-                  child: Text('line chart'),
+                    child: Container(height: 50,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 18.0),
+                    child: CustomLineChart(data:data),
+                  ),
                 ))
               ],
             ),
@@ -137,7 +144,7 @@ class TopStatBar extends StatelessWidget {
             ( mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Total Events",style: TextStyle(color: primaryColor, fontWeight: FontWeight.w400, fontSize: 14),),
+                Text("Total Hours",style: TextStyle(color: primaryColor, fontWeight: FontWeight.w400, fontSize: 14),),
                 Text("32",style: TextStyle(color: headingColor, fontWeight: FontWeight.w500, fontSize: 18),),
                 RichText(
                     text: TextSpan(
@@ -157,7 +164,7 @@ class TopStatBar extends StatelessWidget {
                mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Total Events",style: TextStyle(color: primaryColor, fontWeight: FontWeight.w400, fontSize: 14),),
+                Text("Focus Time",style: TextStyle(color: primaryColor, fontWeight: FontWeight.w400, fontSize: 14),),
                 Text("32",style: TextStyle(color: headingColor, fontWeight: FontWeight.w500, fontSize: 18),),
                 RichText(
                     text: TextSpan(

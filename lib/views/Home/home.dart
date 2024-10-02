@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -55,35 +57,107 @@ class Home extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-
-
-                  TopStatBar(),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Expanded(
-                  //       child: ProgreeCard(
-                  //         order_count: 18,
-                  //         title: "Running Orders",
-                  //       ),
-                  //     ),
-                  //     // SizedBox(
-                  //     //   width: 12,
-                  //     // ),
-                  //     // Expanded(
-                  //     //   child: ProgreeCard(
-                  //     //     order_count: 40,
-                  //     //     title: "Completed Orders",
-                  //     //   ),
-                  //     // )
-                  //   ],
-                  // ),
+                  TopStatBar(
+                    data: cont.chartData,
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  CustomLineChartWidget(
+                    data: cont.chartData,
+                  ),
                   SizedBox(
                     height: 12,
                   ),
                   Container(
-                    height: 400,
-                    child: CustomLineChart(),
+                    padding: EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: secondaryColor),
+                      color: whiteColor,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Recent Orders",
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.w500,
+                              color: primaryColor),
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Container(
+                          height: 300,
+                          width: double.infinity,
+                          // padding: EdgeInsets.all(18),
+
+                          child:
+                              ListView.builder(itemBuilder: (context, index) {
+                            return Container(
+                              margin: EdgeInsets.only(bottom: 6),
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      width: 1, color: secondaryColor),
+                                  borderRadius: BorderRadius.circular(12)),
+                              padding: EdgeInsets.all(8),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                        color: primaryColor,
+                                        image: DecorationImage(image: AssetImage('assets/img-${Random.secure().nextInt(3)+1}.png')),
+                                        borderRadius:
+                                            BorderRadius.circular(12)),
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                  ),
+                                  Expanded(
+                                    flex: 3,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Item Name'),
+                                        Text("Item descrption")
+                                      ],
+                                    ),
+                                  ),
+                                  Expanded(
+                                      flex: 1,
+                                      child: Text(
+                                          "x${Random.secure().nextInt(10)}")),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Container(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Text('Inprogress'),
+                                          Text(
+                                              "\$${(Random.secure().nextDouble() * 234).toStringAsFixed(2)}")
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            );
+                          }),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
