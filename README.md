@@ -4,7 +4,7 @@
 KaffeCloud is a powerful Point of Sale (POS) system designed specifically for coffee shops. It streamlines operations, enhances customer experiences, and provides comprehensive management tools to help your business thrive in the competitive coffee market.
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/m6474n/caffe_dash/refs/heads/main/assets/Screenshot%202024-10-01%20at%203.07.50%E2%80%AFAM.png?token=GHSAT0AAAAAACXGTDVT6WF4MHY2OHZWWKVGZX3EKUQ)
+![App Screenshot](https://raw.githubusercontent.com/m6474n/caffe_dash/refs/heads/main/assets/Screenshot%202024-10-01%20at%203.07.50%E2%80%AFAM.png)
 
 
 ## Features
